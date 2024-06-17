@@ -1,4 +1,5 @@
-kernel_source(popcorn-linux-core
+add_kernel_source     (
+    popcorn-linux-core
     core.h
     core.c
 
