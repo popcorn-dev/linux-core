@@ -1,7 +1,9 @@
-#ifndef _PO_LINUX_DEV_H__
-#define _PO_LINUX_DEV_H__
+#ifndef __PO_DEV_DEV_H__
+#define __PO_DEV_DEV_H__
 
-#include "dev/class.h"
-#include "dev/dev.h"
+#include "core.h"
+
+extern po_obj_trait *po_dev_t;
+typedef struct       po_dev { u8_t dev[256]; } po_dev;
 
 #endif

@@ -2,8 +2,8 @@
 #define __PO_DEV_CLASS_H__
 
 #include <core.h>
-
 #include <collections.h>
+
 #include <linux/device.h>
 
 struct po_dev;
