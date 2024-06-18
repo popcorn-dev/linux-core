@@ -57,7 +57,7 @@ bool_t
 void
     po_wqe_del
         (po_wqe* self)                                     {
-            for ( ; self->stat != po_fut_pend ; schedule());
+            for ( ; self->stat == po_fut_pend ; schedule());
             po_del (self->task);
 }
 
