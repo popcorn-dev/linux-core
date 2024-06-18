@@ -28,8 +28,8 @@ bool_t
             u64_t ret = -1;
             po_ref (self);
 
-            if (intr == 1) ret = wait_event_interruptible_timeout(self->wait, false_t, time);
-            if (intr == 0) ret = wait_event_timeout              (self->wait, false_t, time);
+            if (intr == 1) ret = wait_event_interruptible_timeout(self->wait, true_t, time);
+            if (intr == 0) ret = wait_event_timeout              (self->wait, true_t, time);
 
             if (ret == -1) return false_t;
             po_del (self);
@@ -42,8 +42,8 @@ void
             if (po_trait_of(self) != po_wait_t) return;
             po_ref (self);
 
-            if (intr == 1) wait_event_interruptible(self->wait, false_t);
-            if (intr == 0) wait_event              (self->wait, false_t);
+            if (intr == 1) wait_event_interruptible(self->wait, true_t);
+            if (intr == 0) wait_event              (self->wait, true_t);
             po_del (self);
 }
 
