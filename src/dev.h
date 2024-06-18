@@ -1,7 +1,7 @@
-#ifndef __PO_DEV_DEV_H__
-#define __PO_DEV_DEV_H__
+#ifndef PO_LINUX_DEV_H
+#define PO_LINUX_DEV_H
 
-#include "core.h"
+#include "kernel.h"
 #include "collections.h"
 #include <linux/device.h>
 

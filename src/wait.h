@@ -1,7 +1,7 @@
-#ifndef __WAIT_H__
-#define __WAIT_H__
+#ifndef PO_LINUX_WAIT_H
+#define PO_LINUX_WAIT_H
 
-#include "core.h"
+#include <core.h>
 
 #include <linux/delay.h>
 #include <linux/sched.h>

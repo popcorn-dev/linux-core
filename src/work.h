@@ -1,7 +1,7 @@
-#ifndef __WORK_H__
-#define __WORK_H__
+#ifndef PO_LINUX_CORE_H
+#define PO_LINUX_CORE_H
 
-#include "core.h"
+#include <core.h>
 #include <linux/workqueue.h>
 
 extern po_obj_trait *po_wqe_t;
