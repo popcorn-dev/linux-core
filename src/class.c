@@ -55,11 +55,11 @@ po_obj_trait *po_class_t = &po_class_trait;
 bool_t
     po_class_new
         (po_class* self, u32_t count, va_list arg)                               {
-            po_str       *name = null_t; if (count > 0) name = va_arg(arg, any_t);
+            const char   *name = null_t; if (count > 0) name = va_arg(arg, any_t);
             po_class_ops *ops  = null_t; if (count > 1) ops  = va_arg(arg, any_t);
             po_obj       *obj  = null_t; if (count > 2) obj  = va_arg(arg, any_t);
-            if (po_trait_of (name) != po_str_t) return false_t;
-            self->class.name = po_str_ptr(name);
+            if (!name) return false_t;
+            self->class.name = name;
 
             if (class_register(&self->class)) return false_t;
             if (count < 3)                                  {
@@ -75,7 +75,6 @@ bool_t
             if (!ops->del) goto err;
 
             if (class_interface_register(&self->type)) goto err;
-            self->name = po_ref(name);
             self->obj  = po_ref(obj);
             self->ops  = ops;
             return true_t;
@@ -94,7 +93,6 @@ void
         (po_class* self)                            {
             class_interface_unregister(&self->type) ;
             class_unregister          (&self->class);
-            po_del(self->name);
             po_del(self->obj);
 }
 

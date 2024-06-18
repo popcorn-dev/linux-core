@@ -1,5 +1,5 @@
-#ifndef __PO_DEV_CLASS_H__
-#define __PO_DEV_CLASS_H__
+#ifndef PO_LINUX_CLASS_H
+#define PO_LINUX_CLASS_H
 
 #include <core.h>
 #include <collections.h>
@@ -18,7 +18,6 @@ typedef struct       po_class   {
     po_obj                 head ;
     struct class           class;
     struct class_interface type;
-    po_str                *name;
     po_class_ops          *ops;
     po_obj                *obj;
 }   po_class;
