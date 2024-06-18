@@ -14,8 +14,8 @@ po_obj_trait *po_ua_t = &po_ua_trait;
 bool_t
     po_ua_new
         (po_ua* self, u32_t count, va_list arg)                        {
-            u64_t len = 0ull  ; if (count > 1) len = va_arg(arg, u64_t);
             u8_t* ua  = null_t; if (count > 0) ua  = va_arg(arg, any_t);
+            u64_t len = 0ull  ; if (count > 1) len = va_arg(arg, u64_t);
 
             if (!ua) return false_t;
             self->len = len;
