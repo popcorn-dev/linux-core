@@ -1,5 +1,5 @@
-#ifndef __UA_H__
-#define __UA_H__
+#ifndef PO_LINUX_UA_H
+#define PO_LINUX_UA_H
 
 #include <core.h>
 #include <linux/uaccess.h>

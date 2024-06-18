@@ -1,5 +1,16 @@
 #include "ua.h"
 
+po_obj_trait po_ua_trait = po_make_trait (
+    po_ua_new    ,
+    po_ua_clone  ,
+    null_t       ,
+    po_ua_del    ,
+    sizeof(po_ua),
+    null_t
+);
+
+po_obj_trait *po_ua_t = &po_ua_trait;
+
 bool_t
     po_ua_new
         (po_ua* self, u32_t count, va_list arg)                        {
