@@ -75,3 +75,11 @@ u64_t
             if (po_trait_of(self) != po_ua_t) return false_t;
             return self->len;
 }
+
+#include <linux/module.h>
+
+MODULE_LICENSE("GPL");
+EXPORT_SYMBOL(po_ua_t);
+EXPORT_SYMBOL(po_ua_copy_from);
+EXPORT_SYMBOL(po_ua_copy_to);
+EXPORT_SYMBOL(po_ua_len);

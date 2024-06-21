@@ -56,3 +56,11 @@ bool_t
             if (intr == 0) wake_up              (&self->wait);
             return true_t;
 }
+
+#include <linux/module.h>
+
+MODULE_LICENSE("GPL");
+EXPORT_SYMBOL(po_wait_t);
+EXPORT_SYMBOL(po_wait_on_timeout);
+EXPORT_SYMBOL(po_wait_on);
+EXPORT_SYMBOL(po_wake);
