@@ -1,5 +1,5 @@
-lib_from_repo(klever  gunnerDgd v1-dev)
-lib_from_repo(popcorn gunnerDgd v1-dev)
+lib_from_repo(klever  popcorn-dev main)
+lib_from_repo(popcorn popcorn-dev main)
 dep(popcorn)
 
 include_directories(/lib/modules/${CMAKE_HOST_SYSTEM_VERSION}/build/include)
