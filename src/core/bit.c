@@ -9,8 +9,8 @@ MODULE_LICENSE("GPL");
 u32_t pp_btc32     (u32_t* self, u32_t bit) { return __test_and_change_bit(bit, (volatile unsigned long*) self); }
 u32_t pp_btr32     (u32_t* self, u32_t bit) { return __test_and_clear_bit (bit, (volatile unsigned long*) self); }
 u32_t pp_bts32     (u32_t* self, u32_t bit) { return __test_and_set_bit   (bit, (volatile unsigned long*) self); }
-u32_t pp_bsr32     (u32_t  self)                { return fls(par); }
-u32_t pp_bsf32     (u32_t  self)                { return ffs(par); }
+u32_t pp_bsr32     (u32_t  self)                { return fls(self); }
+u32_t pp_bsf32     (u32_t  self)                { return ffs(self); }
 
 u32_t pp_lock_btc32(u32_t* self, u32_t bit) { return test_and_change_bit(bit, (volatile unsigned long*) self); }
 u32_t pp_lock_btr32(u32_t* self, u32_t bit) { return test_and_clear_bit (bit, (volatile unsigned long*) self); }
