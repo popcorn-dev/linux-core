@@ -1,13 +1,13 @@
-#ifndef __PO_THREAD_MTX_H__
-#define __PO_THREAD_MTX_H__
+#ifndef LINUX_THREAD_MTX_H
+#define LINUX_THREAD_MTX_H
 
-#include "../../../popcorn/include/core.h"
+#include <core.h>
 
-extern po_obj_trait   *po_mut_t;
-typedef struct         po_mut { u8_t po_mtx[64]; } po_mut;
+extern pp_obj_trait   *pp_mut_t;
+typedef struct         pp_mut { u8_t pp_mtx[64]; } pp_mut;
 
-bool_t po_mut_lock_try(po_mut*);
-void   po_mut_lock    (po_mut*);
-void   po_mut_unlock  (po_mut*);
+bool_t pp_mut_lock_try(pp_mut*);
+void   pp_mut_lock    (pp_mut*);
+void   pp_mut_unlock  (pp_mut*);
 
 #endif
