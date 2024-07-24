@@ -8,6 +8,7 @@ extern pp_obj_trait *pp_ua_t;
 typedef struct       pp_ua  {
     pp_obj       head;
     u64_t        len;
+    u64_t        off;
     __user u8_t* ua;
 }   pp_ua;
 
