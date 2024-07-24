@@ -1,11 +1,11 @@
-#ifndef __PO_WORK_H__
-#define __PO_WORK_H__
+#ifndef CORE_WORK_H
+#define CORE_WORK_H
 
-#include "core.h"
+#include <core.h>
 
-extern po_obj_trait *po_wqe_t;
-typedef struct       po_wqe { u8_t wqe[128]; } po_wqe;
+extern pp_obj_trait *pp_wqe_t;
+typedef struct       pp_wqe { u8_t wqe[128]; } pp_wqe;
 
-po_fut* po_wqe_fut  (po_wqe*);
+pp_fut* pp_wqe_fut  (pp_wqe*);
 
 #endif

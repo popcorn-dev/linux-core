@@ -1,11 +1,11 @@
-#ifndef __THREAD_THD_H__
-#define __THREAD_THD_H__
+#ifndef LINUX_THREAD_THD_H
+#define LINUX_THREAD_THD_H
 
-#include "../../../popcorn/include/core.h"
+#include <core.h>
 
-extern po_obj_trait *po_thd_t;
-typedef struct       po_thd { u8_t thd[64]; } po_thd;
+extern pp_obj_trait *pp_thd_t;
+typedef struct       pp_thd { u8_t thd[64]; } pp_thd;
 
-po_fut* po_thd_fut(po_thd*);
+pp_fut* pp_thd_fut(pp_thd*);
 
 #endif

@@ -1,4 +1,4 @@
-add_kernel_source (
+add_kernel_source       (
     popcorn-linux-thread
 
     mut.h
@@ -6,4 +6,11 @@ add_kernel_source (
 
     thd.h
     thd.c
+)
+
+inc                           (
+    popcorn-linux-thread
+    ../../include/thread/thd.h
+    ../../include/thread/mut.h
+    ../../include/thread.h
 )

@@ -1,9 +1,9 @@
-#ifndef __PO_DEV_DEV_H__
-#define __PO_DEV_DEV_H__
+#ifndef CORE_DEV_H
+#define CORE_DEV_H
 
 #include <core.h>
 
-extern po_obj_trait *po_dev_t;
-typedef struct       po_dev { u8_t dev[256]; } po_dev;
+extern pp_obj_trait *pp_dev_t;
+typedef struct       pp_dev { u8_t dev[256]; } pp_dev;
 
 #endif
